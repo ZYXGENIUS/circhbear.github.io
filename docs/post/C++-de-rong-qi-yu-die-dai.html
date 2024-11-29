@@ -10,16 +10,16 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="#C++中的容器与迭代器
+<meta name="description" content="# C++中的容器与迭代器
 首先我们提出一个问题：容器与迭代是什么？
 
-##容器是什么？
+## 容器是什么？
 在我看来容器就是“容纳一定内容的空间”。">
 <meta property="og:title" content="C++的容器与迭代">
-<meta property="og:description" content="#C++中的容器与迭代器
+<meta property="og:description" content="# C++中的容器与迭代器
 首先我们提出一个问题：容器与迭代是什么？
 
-##容器是什么？
+## 容器是什么？
 在我看来容器就是“容纳一定内容的空间”。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ZYXGENIUS.github.io/circhbear.github.io/post/C%2B%2B-de-rong-qi-yu-die-dai.html">
@@ -91,15 +91,15 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>#C++中的容器与迭代器<br>
-首先我们提出一个问题：容器与迭代是什么？</p>
-<p>##容器是什么？<br>
-在我看来容器就是“容纳一定内容的空间”。比如数组就是一个容器，一个<code class="notranslate">int a[10]</code>数组，可以容纳10个整型数字。<br>
+<div class="markdown-body" id="postBody"><h1>C++中的容器与迭代器</h1>
+<p>首先我们提出一个问题：容器与迭代是什么？</p>
+<h2>容器是什么？</h2>
+<p>在我看来容器就是“容纳一定内容的空间”。比如数组就是一个容器，一个<code class="notranslate">int a[10]</code>数组，可以容纳10个整型数字。<br>
 值得注意的是，容器依据其中是否重复，划分为不同形式：</p>
 <p>如数组类型，其中元素可以重复。<br>
 如set类型，其中元素不能重复。我们先看看set类型是什么。</p>
-<p>###一个有序、不含重复元素的容器——set<br>
-具有以下特点：</p>
+<h3>一个有序、不含重复元素的容器——set</h3>
+<p>具有以下特点：</p>
 <ul>
 <li>元素不重复</li>
 <li>自动排序</li>
@@ -122,8 +122,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <span class="pl-c"><span class="pl-c">//</span> 删除元素</span>
     s1.<span class="pl-c1">erase</span>(<span class="pl-c1">10</span>);
 }</pre></div>
-<p>###键值对——map<br>
-先看例子：</p>
+<h3>键值对——map</h3>
+<p>先看例子：</p>
 <pre class="notranslate"><code class="notranslate">#include &lt;map&gt;
 #include &lt;string&gt;
 using namespace std;
@@ -155,8 +155,8 @@ int main()
 }
 </code></pre>
 <h2>这就是说通过Key直接找到值。但是键确定了就不能轻易修改，除非把该键值对删掉，重新找一个键对应该值。</h2>
-<p>##迭代器是什么？<br>
-迭代器就像一个指针，用来指向容器中的元素（注意数组与指针的关系）。它提供了访问容器元素的方法。</p>
+<h2>迭代器是什么？</h2>
+<p>迭代器就像一个指针，用来指向容器中的元素（注意数组与指针的关系）。它提供了访问容器元素的方法。</p>
 <div class="highlight highlight-source-c++"><pre class="notranslate">#<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>vector<span class="pl-pds">&gt;</span></span>
 #<span class="pl-k">include</span> <span class="pl-s"><span class="pl-pds">&lt;</span>iostream<span class="pl-pds">&gt;</span></span>
 <span class="pl-k">using</span> <span class="pl-k">namespace</span> <span class="pl-en">std</span><span class="pl-k">;</span>
@@ -185,9 +185,9 @@ int main()
     <span class="pl-c"><span class="pl-c">//</span> it = nums.begin();   // 需要重新获取迭代器</span>
 }</pre></div>
 <hr>
-<p>##写在最后——容器中元素的查找<br>
-有一些<strong>现有的函数</strong>可以直接使用。<br>
-#####比如find函数：</p>
+<h2>写在最后——容器中元素的查找</h2>
+<p>有一些<strong>现有的函数</strong>可以直接使用。</p>
+<h5>比如find函数：</h5>
 <pre class="notranslate"><code class="notranslate">#include &lt;vector&gt;
 #include &lt;map&gt;
 #include &lt;algorithm&gt;  // 包含find函数
